@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+    --color-ascend-light-orange: #FF9D65;
+    --color-ascend-red-orange: #E83402;
+    --color-ascend-dark-blue: #171B4B;
+    --color-ascend-peach: #FFAC7C;
+
+    --font-ascend-playfair: "Playfair Display", serif;
+    --font-ascend-nunito: "Nunito", serif;
+}
