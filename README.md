@@ -13,7 +13,7 @@
 
 ## Figma
 
-[Ascend Figma Design File](https://www.figma.com/)
+[Ascend Figma Design File](https://www.figma.com/design/qjyTE8hweT5QvobzrEPvFK/Ascend-Website)
 
 ## Node.js
 
