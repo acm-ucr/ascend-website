@@ -32,7 +32,7 @@ const NavBar: React.FC = () => {
 
         {/* Right: Nav */}
         <nav>
-          <ul className="flex items-center gap-12 text-xl">
+          <ul className="flex items-center gap-15 text-2xl">
             {LINKS.map(({ href, label }) => {
               const isActive =
                 href === "/" ? pathname === "/" : pathname.startsWith(href);
