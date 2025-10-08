@@ -1,9 +1,17 @@
-import Example from "@/components/example";
+import NavBar from "@/components/NavBar";
 
 const Home = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <Example text1="adjust" text2="text2" text3="these" />
+    <div className="flex min-h-screen flex-col">
+      {/* Navbar */}
+      <NavBar />
+
+      {/* Main content */}
+      <main className="flex flex-1 items-center justify-center">
+        <h1 className="text-3xl font-semibold text-gray-800">
+          Welcome to Ascend UC Riverside
+        </h1>
+      </main>
     </div>
   );
 };
