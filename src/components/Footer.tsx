@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="flex h-1/3 w-screen items-center justify-between px-32 py-8">
+    <div className="flex h-1/3 w-screen items-center justify-between px-32 py-8 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)]">
       <Image src={ascendLogo} className="w-1/4" alt="Ascend Logo" />
 
       <div className="flex flex-col text-left">
