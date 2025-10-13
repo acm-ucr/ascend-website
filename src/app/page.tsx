@@ -1,12 +1,9 @@
-import NavBar from "@/components/NavBar";
+import Example from "@/components/Example";
 
 const Home = () => {
   return (
-    <div className="flex min-h-screen flex-col">
-      {/* Da Navbar */}
-      <NavBar />
-
-      <div className="flex h-screen w-screen items-center justify-center"></div>
+    <div className="flex h-screen w-screen items-center justify-center">
+      <Example text1="adjust" text2="text2" text3="these" />
     </div>
   );
 };

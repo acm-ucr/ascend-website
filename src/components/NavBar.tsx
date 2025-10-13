@@ -1,4 +1,3 @@
-// app/components/NavBar.tsx
 "use client";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,13 +12,12 @@ const LINKS = [
   { href: "/programs", label: "Programs" },
 ];
 
-const NavBar: React.FC = () => {
+const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <header className="bg-gradient-to-r from-orange-50 via-orange-200 to-orange-400 shadow-md">
+    <header className="to-ascend-peach bg-gradient-to-r from-white shadow-md">
       <div className="flex w-full items-center justify-between px-20 py-3">
-        {/* Left: Logo */}
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/logo.webp"
@@ -30,9 +28,8 @@ const NavBar: React.FC = () => {
           />
         </Link>
 
-        {/* Right: Nav */}
         <nav>
-          <ul className="flex items-center gap-15 text-2xl">
+          <ul className="flex items-center gap-8 text-2xl font-[var(--font-nunito)]">
             {LINKS.map(({ href, label }) => {
               const isActive =
                 href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -43,8 +40,8 @@ const NavBar: React.FC = () => {
                     aria-current={isActive ? "page" : undefined}
                     className={[
                       "transition-colors",
-                      "text-neutral-900 hover:text-orange-600",
-                      isActive ? "font-medium text-orange-600" : "",
+                      "text-ascend-dark-blue hover:text-ascend-red-orange",
+                      isActive ? "text-ascend-red-orange font-medium" : "",
                     ].join(" ")}
                   >
                     {label}
