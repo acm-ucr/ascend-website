@@ -7,15 +7,15 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="flex h-1/3 w-screen items-center justify-between px-32 py-8 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)]">
-      <Image src={ascendLogo} className="w-1/4" alt="Ascend Logo" />
+    <div className="flex h-1/3 w-screen items-center justify-between px-32 py-10 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)]">
+      <Image src={ascendLogo} className="w-1/5" alt="Ascend Logo" />
 
       <div className="flex flex-col text-left">
-        <div className="font-playfair text-4xl font-bold">Contact Us</div>
+        <div className="font-playfair text-3xl font-bold">Contact Us</div>
 
         <a
           href="mailto:ascenducr@gmail.com"
-          className="mt-1 text-2xl font-semibold underline decoration-1"
+          className="mt-1 underline decoration-1"
         >
           ascenducr@gmail.com
         </a>
@@ -26,7 +26,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SiLinktree size={55} />
+            <SiLinktree size={35} />
           </Link>
 
           <Link
@@ -34,7 +34,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FiLinkedin size={60} />
+            <FiLinkedin size={40} />
           </Link>
 
           <Link
@@ -42,7 +42,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram size={60} />
+            <FaInstagram size={40} />
           </Link>
         </div>
       </div>
