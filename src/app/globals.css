@@ -6,6 +6,10 @@
   --color-ascend-dark-blue: #171b4b;
   --color-ascend-peach: #ffac7c;
 
+  --color-ascend-light-blue: blue-200;
+  --color-ascend-sky-blue: blue-300;
+  --color-ascend-medium-blue: blue-400;
+
   --font-playfair: "Playfair_Display", serif;
   --font-nunito: "Nunito_Sans";
 }
