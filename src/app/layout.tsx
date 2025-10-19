@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Nunito_Sans, Playfair_Display } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
+import Footer from "@/components/Footer";
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: LayoutProps) {
     <html lang="en">
       <body className={`font-nunito ${playfair.variable} ${nunito.variable}`}>
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
+        <Footer />
       </body>
     </html>
   );
