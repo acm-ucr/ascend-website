@@ -29,7 +29,7 @@ const NavBar = () => {
         </Link>
 
         <nav>
-          <ul className="flex items-center gap-8 text-2xl font-[var(--font-nunito)]">
+          <ul className="flex items-center gap-8 text-2xl">
             {LINKS.map(({ href, label }) => {
               const isActive =
                 href === "/" ? pathname === "/" : pathname.startsWith(href);
