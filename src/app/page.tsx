@@ -1,10 +1,9 @@
 import Example from "@/components/Example";
-import Heading from "@/components/Heading";
 
 const Home = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      <Heading title ="About Us"/>
+      <Example text1="adjust" text2="text2" text3="these" />
     </div>
   );
 };
