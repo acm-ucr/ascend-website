@@ -5,15 +5,15 @@ export default function Heading({ title = "About Us" }) {
     <div className="flex items-center justify-center">
       <div className="mb-5 flex flex-col gap-2">
         <div className="flex gap-2">
-          <span className={dot}></span>
-          <span className={dot}></span>
-          <span className={dot}></span>
+          <span className={dot}/>
+          <span className={dot}/>
+          <span className={dot}/>
         </div>
         <div className="flex gap-2">
-          <span className={dot}></span>
+          <span className={dot}/>
         </div>
         <div className="flex gap-2">
-          <span className={dot}></span>
+          <span className={dot}/>
         </div>
       </div>
 
@@ -23,15 +23,15 @@ export default function Heading({ title = "About Us" }) {
 
       <div className="mt-5 flex flex-col items-end gap-2">
         <div className="flex gap-2">
-          <span className={dot}></span>
+          <span className={dot}/>
         </div>
         <div className="flex gap-2">
-          <span className={dot}></span>
+          <span className={dot}/>
         </div>
         <div className="flex gap-2">
-          <span className={dot}></span>
-          <span className={dot}></span>
-          <span className={dot}></span>
+          <span className={dot}/>
+          <span className={dot}/>
+          <span className={dot}/>
         </div>
       </div>
     </div>
