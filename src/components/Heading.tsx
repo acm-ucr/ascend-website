@@ -1,5 +1,5 @@
 export default function Heading({ title = "About Us" }) {
-  const dot = "w-[12px] h-[12px] bg-[#ffa366] rounded-full";
+  const dot = "w-5 h-5 bg-ascend-light-orange rounded-full";
 
   return (
     <div className="flex items-center justify-center">
@@ -17,7 +17,7 @@ export default function Heading({ title = "About Us" }) {
         </div>
       </div>
 
-      <h2 className="mx-9 font-[Playfair_Display] text-2xl font-bold text-[#1a1a3b]">
+      <h2 className="mx-9 font-playfair text-6xl font-bold text-ascend-dark-blue">
         {title}
       </h2>
 
