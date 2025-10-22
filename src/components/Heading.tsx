@@ -1,4 +1,4 @@
-export default function Header({ title = "About Us" }) {
+export default function Heading({ title = "About Us" }) {
   const dot = "w-[12px] h-[12px] bg-[#ffa366] rounded-full";
 
   return (
