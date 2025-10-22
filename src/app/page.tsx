@@ -4,7 +4,7 @@ import Heading from "@/components/Heading";
 const Home = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      <Heading />
+      <Heading title ="About Us"/>
     </div>
   );
 };

@@ -1,5 +1,11 @@
-export default function Heading({ title = "About Us" }) {
-  const dot = "w-5 h-5 bg-ascend-light-orange rounded-full";
+
+const dot = "w-5 h-5 bg-ascend-light-orange rounded-full";
+
+interface HeadingProps {
+  title: string
+}
+
+const Heading = ({ title }: HeadingProps) => {
 
   return (
     <div className="flex items-center justify-center">
@@ -37,3 +43,5 @@ export default function Heading({ title = "About Us" }) {
     </div>
   );
 }
+
+export default Heading;
