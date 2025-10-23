@@ -12,11 +12,11 @@ import gwmiddle from "@/public/events/growth-week/gw-middle.webp";
 import gwright from "@/public/events/growth-week/gw-right.webp";
 
 const PastEvents = () => {
-  const [activeTab, setActiveTab] = useState("tab1");
+  const [activeTab, setActiveTab] = useState(1);
 
   const tabs = [
     {
-      id: "tab1",
+      id: 1,
       title: "Ascend OC Events",
 
       content: `At Ascend UCR, we’re proud to be part of something bigger than just ourselves — and we’re connected to the regional Ascend Orange County Chapter. Even though we're based in the Inland Empire, our student chapter makes a real effort to not just attend, but actively volunteer at Ascend OC events.
@@ -26,15 +26,17 @@ const PastEvents = () => {
          Being part of Ascend UCR means you're not just joining another campus club — you're stepping into a wider professional community ready to help you grow.`,
     },
     {
-      id: "tab2",
+      id: 2,
       title: "Speaker Series",
 
       content: `At Ascend UCR, we believe the best way to grow is by learning directly from those who’ve been there. That's why every quarter, we bring in 4 or more industry profesionals that are not just from our own network, but also from the broader Ascend community too.
         
-         We focus on leaders who are shaping the fields of Finance, Accounting, Technology, and Consulting, giving you real-world insights from early career moves to top leadership lessons. Our Speaker Series isn't just about listening, it's about connecting. These events give you the chance to build real, lasting relationships face-to-face, and to take the next step in your professional journey with people who can help you get there.`,
+         We focus on leaders who are shaping the fields of Finance, Accounting, Technology, and Consulting, giving you real-world insights from early career moves to top leadership lessons. 
+         
+         Our Speaker Series isn't just about listening, it's about connecting. These events give you the chance to build real, lasting relationships face-to-face, and to take the next step in your professional journey with people who can help you get there.`,
     },
     {
-      id: "tab3",
+      id: 3,
       title: "Growth Week",
 
       content: `At Ascend UCR, we believe starting your professional journey shouldn't be overwhelming — that's why we created Growth Week. Instead of spreading workshops across the year like most organizations, we condences everything you need to kickstart you career into one action-packed week.
@@ -47,51 +49,110 @@ const PastEvents = () => {
   return (
     <div className="outline-ascend-light-orange h-full w-full p-16">
       <div className="flex">
-        {tabs.map((tab) => (
+        {tabs.map(({ id, title }) => (
           <button
-            key={tab.id}
+            key={id}
             className={`font-playfair flex-1 rounded-t-4xl p-8 text-4xl font-bold ${
-              activeTab === tab.id
+              activeTab === id
                 ? "bg-ascend-light-orange"
                 : "text-ascend-red-orange bg-gray-300"
             }`}
-            onClick={() => setActiveTab(tab.id)}
+            onClick={() => setActiveTab(id)}
           >
-            {tab.title}
+            {title}
           </button>
         ))}
       </div>
-      <div className="font-nunito outline-ascend-light-orange h-5/6 p-10 text-center text-2xl outline-2">
+      <div className="font-nunito border-ascend-light-orange border-2 p-10 text-center text-2xl">
         {tabs.map(
-          (tab) =>
-            activeTab === tab.id && (
-              <div key={tab.id} className="space-y-8">
-                {tab.content.split("\n").map((paragraph, idx) => (
+          ({ id, content }) =>
+            activeTab === id && (
+              <div key={id} className="space-y-8">
+                {content.split("\n").map((paragraph, idx) => (
                   <p key={idx}>{paragraph.trim()}</p>
                 ))}
-                {activeTab === "tab1" && (
+                {activeTab === 1 && (
                   <div className="grid grid-cols-3 gap-4">
-                    <Image src={ocleft} alt="ocleft" className="rounded-lg" />
-                    <Image
-                      src={ocmiddle}
-                      alt="ocmiddle"
-                      className="rounded-lg"
-                    />
-                    <Image src={ocright} alt="ocright" className="rounded-lg" />
+                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      <Image
+                        src={ocleft}
+                        alt="ocleft"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      <Image
+                        src={ocmiddle}
+                        alt="ocmiddle"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      <Image
+                        src={ocright}
+                        alt="ocright"
+                        fill
+                        className="object-cover [object-position:center_20%]"
+                      />
+                    </div>
                   </div>
                 )}
-                {activeTab === "tab2" && (
+                {activeTab === 2 && (
                   <div className="grid grid-cols-3 gap-4">
-                    <Image src={ssleft} alt="ssleft" className="" />
-                    <Image src={ssmiddle} alt="ssmiddle" className="" />
-                    <Image src={ssright} alt="ssright" className="" />
+                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      <Image
+                        src={ssleft}
+                        alt="ssleft"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      <Image
+                        src={ssmiddle}
+                        alt="ssmiddle"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      <Image
+                        src={ssright}
+                        alt="ssright"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 )}
-                {activeTab === "tab3" && (
+                {activeTab === 3 && (
                   <div className="grid grid-cols-3 gap-4">
-                    <Image src={gwleft} alt="gwleft" className="" />
-                    <Image src={gwmiddle} alt="gwmiddle" className="" />
-                    <Image src={gwright} alt="gwright" className="" />
+                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      <Image
+                        src={gwleft}
+                        alt="gwleft"
+                        fill
+                        className="object-cover [object-position:center_40%]"
+                      />
+                    </div>
+                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      <Image
+                        src={gwmiddle}
+                        alt="gwmiddle"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      <Image
+                        src={gwright}
+                        alt="gwright"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 )}
               </div>
