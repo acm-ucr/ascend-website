@@ -1,13 +1,12 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-interface props {
-  profilePic: StaticImageData; // the picture of the member
-  name: string; // the member's name
-  position: string; // what position the member holds
-  majorYear: string; // the member's major and their year
-  linkedin: string; // the link to the board member's LinkedIn
-  imgSize?: number; // size of profile picture, default is set to 300
+interface BoardProps {
+  profilePic: StaticImageData;
+  name: string;
+  position: string;
+  majorYear: string;
+  linkedin: string;
 }
 
 const Board = ({
@@ -16,61 +15,22 @@ const Board = ({
   position,
   majorYear,
   linkedin,
-  imgSize = 300,
-}: props) => {
+}: BoardProps) => {
   return (
-    <div
-      style={{
-        position: "relative",
-        maxWidth: imgSize,
-        font: "var(--font-nunito)",
-      }}
-    >
+    <div className="font-nunito relative">
       <Image
         src={profilePic}
         alt="profile Pic"
-        style={{
-          position: "relative",
-          objectFit: "cover",
-          borderRadius: "20px",
-          maxHeight: imgSize,
-        }}
+        className="relative max-h-115 max-w-115 rounded-3xl object-cover"
       />
-      <div
-        style={{
-          display: "grid",
-          gridAutoRows: "min-content",
-          backgroundColor: "rgba(255, 255, 255, 0.85)",
-          transform: "translateY(-125%)",
-          width: imgSize * 0.75,
-          height: imgSize * 0.25,
-          paddingLeft: imgSize * 0.06,
-          alignContent: "center",
-        }}
-      >
-        <p style={{ fontWeight: "bold", fontSize: imgSize * 0.06 }}> {name} </p>
-        <p style={{ fontSize: imgSize * 0.05 }}> {position} </p>
+      <div className="grid h-25 w-80 -translate-y-40 auto-rows-min content-center bg-white/80 pl-5">
+        <p className="text-2xl font-bold"> {name} </p>
+        <p className="text-l"> {position} </p>
       </div>
-      <div style={{ textAlign: "center", transform: "translateY(-125%)" }}>
-        <p style={{ fontSize: imgSize * 0.05, paddingBottom: imgSize * 0.025 }}>
-          {majorYear}
-        </p>
+      <div className="-translate-y-20">
+        <p className="pb-3 text-center text-xl">{majorYear}</p>
         <Link href={linkedin} target="_blank">
-          <p
-            style={{
-              fontSize: imgSize * 0.04,
-              backgroundColor: "var(--color-ascend-dark-blue)",
-              color: "white",
-              textDecoration: "underline",
-              textDecorationThickness: "5%",
-              textUnderlineOffset: "10%",
-              width: "fit-content",
-              borderRadius: "20px",
-              paddingInline: imgSize * 0.05,
-              paddingBlock: imgSize * 0.01,
-              justifySelf: "center",
-            }}
-          >
+          <p className="text-l bg-ascend-dark-blue w-fit justify-self-center rounded-full px-6 py-1 text-white underline decoration-0 underline-offset-2">
             {"LinkedIn"}
           </p>
         </Link>
