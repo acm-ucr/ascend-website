@@ -1,11 +1,14 @@
-import Example from "@/components/Example";
+import Navbar from "@/components/NavBar";
+import Landing from "@/components/Landing";
 
-const Home = () => {
+export default function Home() {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <Example text1="adjust" text2="text2" text3="these" />
+    <div className="flex min-h-screen flex-col">
+      <Navbar />
+
+      <main className="flex-1">
+        <Landing />
+      </main>
     </div>
   );
-};
-
-export default Home;
+}

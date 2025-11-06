@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export default function Landing() {
   const cardBase =
-    "w-full max-w-lg h-[140px] px-8 py-5 md:px-10 md:py-6 text-center shadow-xl ring-1 ring-black/10 backdrop-blur-md bg-white/50";
+    "relative w-full max-w-lg h-[140px] px-8 py-5 md:px-10 md:py-6 text-center shadow-xl ring-1 ring-black/10 bg-white/50";
 
   return (
     <section
       aria-label="Ascend landing hero"
-      className="relative isolate flex min-h-[65vh] w-full items-start justify-center overflow-hidden bg-neutral-900 md:min-h-[75vh] lg:min-h-[80vh]"
+      className="relative isolate flex min-h-[60vh] w-full items-start justify-center overflow-hidden bg-neutral-900 md:min-h-[75vh] lg:min-h-[80vh]"
     >
       <Image
         src="/home/group-1.webp"
@@ -16,7 +16,7 @@ export default function Landing() {
         fill
         priority
         sizes="100vw"
-        className="object-contain"
+        className="object-cover object-center"
       />
 
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/30" />
