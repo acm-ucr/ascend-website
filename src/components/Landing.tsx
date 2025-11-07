@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Landing() {
   const cardBase =
-    "relative w-full max-w-lg h-[140px] px-8 py-5 md:px-10 md:py-6 text-center shadow-xl ring-1 ring-black/10 bg-white/50";
+    "relative w-full max-w-lg h-[140px] px-8 py-5 md:px-10 md:py-6 text-center shadow-xl ring-1 ring-black/10 bg-white/40";
 
   return (
     <section
@@ -28,17 +28,11 @@ export default function Landing() {
         />
 
         <div className={cardBase}>
-          <h1
-            className="text-ascend-red-orange -mt-4 text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl"
-            style={{ fontFamily: "var(--font-playfair)" }}
-          >
+          <h1 className="text-ascend-red-orange font-playfair -mt-4 text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">
             Ascend
           </h1>
 
-          <p
-            className="py-2 text-xl font-semibold text-black/90 md:text-3xl"
-            style={{ fontFamily: "var(--font-nunito)" }}
-          >
+          <p className="font-nunito py-2 text-xl font-semibold text-black/90 md:text-3xl">
             Connect. Inspire. Ascend.
           </p>
         </div>

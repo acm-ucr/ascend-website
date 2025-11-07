@@ -1,7 +1,11 @@
+import Landing from "@/components/Landing";
+
 const Home = () => {
   return (
-    <div className="flex min-h-screen w-full items-center justify-center">
-      Home
+    <div className="w-full">
+      <Landing />
     </div>
   );
-}
+};
+
+export default Home;
