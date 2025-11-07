@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="flex h-1/3 w-screen items-center justify-between px-32 py-10 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)]">
+    <footer className="flex h-1/3 w-full items-center justify-between px-32 py-10 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)]">
       <Image src={ascendLogo} className="w-1/5" alt="Ascend Logo" />
 
       <div className="flex flex-col text-left">
@@ -46,7 +46,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 export default Footer;
