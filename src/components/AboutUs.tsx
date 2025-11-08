@@ -6,7 +6,7 @@ import Heading from "../components/Heading";
 
 const AboutUs = () => {
   return (
-    <div className="font-nunito flex w-4/5 flex-col gap-8 text-2xl/11 p-20">
+    <div className="font-nunito flex w-4/5 flex-col gap-8 p-20 text-2xl/11">
       <Heading title="About Us" />
 
       <p>
@@ -22,8 +22,8 @@ const AboutUs = () => {
         promote personal/professional development and create lifelong
         friendships.
       </p>
-      
-      <div className="flex flex-row justify-between text-4xl col-span-3">
+
+      <div className="col-span-3 flex flex-row justify-between text-4xl">
         <div className="flex flex-col items-center gap-6">
           <Image
             src={connect}
@@ -41,10 +41,7 @@ const AboutUs = () => {
           <p className="text-ascend-dark-blue">Inspire</p>
         </div>
         <div className="flex flex-col items-center gap-6">
-          <Image 
-            src={ascend} 
-            alt="Ascend" 
-            className="h-64 w-64 object-cover" />
+          <Image src={ascend} alt="Ascend" className="h-64 w-64 object-cover" />
           <p className="text-ascend-dark-blue">Ascend</p>
         </div>
       </div>
