@@ -1,9 +1,7 @@
-import AboutUs from "@/components/AboutUs";
-
 const Home = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <AboutUs />
+    <div className="flex min-h-screen w-full items-center justify-center">
+      Home
     </div>
   );
 };

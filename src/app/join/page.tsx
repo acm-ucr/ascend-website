@@ -1,5 +1,11 @@
+import AboutUs from "@/components/AboutUs";
+
 const Join = () => {
-  return <p>Join Us</p>;
+  return (
+    <div className="flex h-screen w-screen items-center justify-center">
+      <AboutUs />
+    </div>
+  );
 };
 
 export default Join;
