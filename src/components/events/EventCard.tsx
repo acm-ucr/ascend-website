@@ -24,7 +24,7 @@ const EventCard = ({
         </div>
         <div>{location}</div>
       </div>
-      <div className="text-left text-2xl font-thin indent-8">{description}</div>
+      <div className="text-left indent-8 text-2xl font-thin">{description}</div>
     </div>
   );
 };
