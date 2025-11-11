@@ -2,7 +2,7 @@ import Image from "next/image";
 import connect from "@/public/home/connect.webp";
 import inspire from "@/public/home/inspire.webp";
 import ascend from "@/public/home/ascend.webp";
-import Heading from "../components/Heading";
+import Heading from "../Heading";
 
 const AboutUs = () => {
   return (
