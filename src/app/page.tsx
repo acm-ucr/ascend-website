@@ -1,9 +1,7 @@
-const Home = () => {
-  return (
-    <div className="flex min-h-screen w-full items-center justify-center">
-      Home
-    </div>
-  );
+import AboutUs from "@/components/home/AboutUs";
+
+const About = () => {
+  return <AboutUs />;
 };
 
-export default Home;
+export default About;
