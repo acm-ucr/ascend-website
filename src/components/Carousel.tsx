@@ -3,7 +3,6 @@ import CarouselItem from "./CarouselItem";
 import { StaticImageData } from "next/image";
 import { motion } from "motion/react";
 
-
 interface CarouselDataItem {
   icon: StaticImageData;
 }
