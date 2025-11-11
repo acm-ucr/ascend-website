@@ -3,6 +3,7 @@ import CarouselItem from "./CarouselItem";
 import { StaticImageData } from "next/image";
 import { motion } from "motion/react";
 
+
 interface CarouselDataItem {
   icon: StaticImageData;
 }
@@ -13,10 +14,10 @@ interface CarouselProps {
 
 const CarouselAnimation = (index: number, length: number) => ({
   initial: { x: 0 },
-  animate: { x: "-300%" },
+  animate: { x: "-200%" },
   transition: {
     duration: 20,
-    ease: "linear",
+    ease: (t: number) => t,
     repeat: Infinity,
     delay: (20 / length) * (length - index + 1) * -1,
   },
@@ -26,7 +27,7 @@ const Carousel = ({ data }: CarouselProps) => {
   const length = data.length;
 
   return (
-    <div className="relative mt-24 h-100 w-full overflow-hidden md:my-10">
+    <div className="relative mt-24 h-96 w-full overflow-hidden md:my-10">
       <div className="w-[1200px] xl:w-full">
         {data.map(({ icon }, index) => {
           const animation = CarouselAnimation(index, length);
