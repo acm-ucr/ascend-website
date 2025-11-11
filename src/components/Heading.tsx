@@ -1,4 +1,4 @@
-const dot = "w-5.5 h-5.5 bg-ascend-light-orange rounded-full";
+const dot = "w-5 h-5 bg-ascend-light-orange rounded-full";
 
 interface HeadingProps {
   title: string;
