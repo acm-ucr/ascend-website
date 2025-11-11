@@ -1,7 +1,7 @@
 import AboutUs from "@/components/AboutUs";
 
-const Home = () => {
+const About = () => {
   return <AboutUs />;
 };
 
-export default Home;
+export default About;
