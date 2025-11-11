@@ -13,7 +13,7 @@ interface CarouselProps {
 
 const CarouselAnimation = (index: number, length: number) => ({
   initial: { x: 0 },
-  animate: { x: "-120%" },
+  animate: { x: "-300%" },
   transition: {
     duration: 20,
     ease: "linear",
@@ -37,7 +37,7 @@ const Carousel = ({ data }: CarouselProps) => {
               animate={animation.animate}
               transition={animation.transition}
             >
-              <CarouselItem icon={icon} />
+              <CarouselItem  icon={icon}  />
             </motion.div>
           );
         })}
