@@ -1,5 +1,5 @@
 const Join = () => {
-  return <p>joinus</p>;
+  return <p>join us</p>;
 };
 
 export default Join;
