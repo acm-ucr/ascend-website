@@ -6,24 +6,23 @@ import Heading from "../components/Heading";
 
 const AboutUs = () => {
   return (
-    <div className="font-nunito flex w-4/5 flex-col gap-8 p-20 text-2xl/11">
+    <div className="font-nunito mx-auto flex w-4/5 flex-col gap-8 p-20 text-2xl/11">
       <Heading title="About Us" />
-
-      <p>
+      <p className="mt-10">
         Ascend UCR is a one of the student-led chapters of Ascend Leadership,
         the largest non-profit membership organizations advancing Pan-Asian
         professionals in the workplace. Our objective is to empower Asian and
         Pacific Islander (API) business leaders of tomorrow to build community
         and ignite change.
       </p>
-      <p>
+      <p className="mb-5">
         Through our UCR student chapter we host weekly events such as
         professional workshops, guest speakers, social events, and more to
         promote personal/professional development and create lifelong
         friendships.
       </p>
 
-      <div className="col-span-3 flex flex-row justify-between text-4xl">
+      <div className="grid grid-cols-3 justify-between text-4xl">
         <div className="flex flex-col items-center gap-6">
           <Image
             src={connect}
