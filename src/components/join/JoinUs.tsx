@@ -1,7 +1,7 @@
 import Heading from "@/components/Heading";
 import Image from "next/image";
 
-const Landing = () => {
+const JoinUs = () => {
   return (
     <div className="min-h-screen">
       <div className="flex flex-col items-center justify-center pt-20">
@@ -27,4 +27,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default JoinUs;
