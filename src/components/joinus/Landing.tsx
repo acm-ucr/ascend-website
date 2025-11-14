@@ -3,22 +3,22 @@ import Image from "next/image";
 
 const Landing = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="flex flex-col items-center justify-center pt-10">
+    <div className="min-h-screen">
+      <div className="flex flex-col items-center justify-center pt-20">
         <Heading title="Join Us" />
-        <div className="text-ascend-dark-blue mt-8 w-3/4 text-center text-2xl">
+        <p className="text-ascend-dark-blue mt-15 w-2/3 text-center text-2xl">
           Ascend is a national non-profit organization that is advancing
           Pan-Asian professionals across all industries. We welcome students of
           every major who are passionate about leadership, growth, and
           community.
-        </div>
+        </p>
 
-        <div className="mt-12 flex h-125 w-3/4 items-center justify-center bg-gray-300">
+        <div className="relative my-15 h-96 w-2/3">
           <Image
             src="/home/ascend.webp"
             alt="Logo"
-            width={750}
-            height={200}
+            fill
+            className="object-cover"
             priority
           />
         </div>
