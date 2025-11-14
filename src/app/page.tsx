@@ -3,10 +3,11 @@ import AboutUs from "@/components/home/AboutUs";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center min-h-screen w-full">
+    <div className="flex min-h-screen w-full flex-col items-center">
       <Landing />
       <AboutUs />
     </div>
   );
+};
 
 export default Home;
