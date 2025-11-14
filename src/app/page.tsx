@@ -1,4 +1,4 @@
-import Landing from "@/components/Landing";
+import Landing from "@/components/home/Landing";
 import AboutUs from "@/components/home/AboutUs";
 
 const Home = () => {
