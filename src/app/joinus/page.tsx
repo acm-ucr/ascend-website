@@ -1,5 +1,7 @@
-const Join = () => {
-  return <p>join us</p>;
-};
+import Landing from "@/components/joinus/Landing";
 
-export default Join;
+/* const Landing = () => {
+  return <p>join us</p>;
+}; */
+
+export default Landing;
