@@ -1,6 +1,6 @@
 "use client";
-import CarouselItem from "./CarouselItem";
 import { StaticImageData } from "next/image";
+import Image from "next/image";
 import { motion } from "motion/react";
 
 interface CarouselDataItem {
@@ -11,37 +11,30 @@ interface CarouselProps {
   data: CarouselDataItem[];
 }
 
-const CarouselAnimation = (index: number, length: number) => ({
-  initial: { x: 0 },
-  animate: { x: "-200%" },
-  transition: {
-    duration: 20,
-    ease: (t: number) => t,
-    repeat: Infinity,
-    delay: (20 / length) * (length - index + 1) * -1,
-  },
-});
-
 const Carousel = ({ data }: CarouselProps) => {
-  const length = data.length;
+  const scrollingItems = [...data, ...data]; // duplicate for infinite scroll
 
   return (
     <div className="relative mt-24 h-96 w-full overflow-hidden md:my-10">
-      <div className="w-[1200px] xl:w-full">
-        {data.map(({ icon }, index) => {
-          const animation = CarouselAnimation(index, length);
-          return (
-            <motion.div
-              key={index}
-              initial={animation.initial}
-              animate={animation.animate}
-              transition={animation.transition}
-            >
-              <CarouselItem icon={icon} />
-            </motion.div>
-          );
-        })}
-      </div>
+      <motion.div
+        className="flex gap-8 items-center"
+        initial={{ x: 0 }}
+        animate={{ x: "-50%" }}
+        transition={{
+          repeat: Infinity,
+          ease: [0, 0, 1, 1],
+          duration: 20, // adjust for speed
+        }}
+      >
+        {scrollingItems.map((item, index) => (
+          <div
+            key={index}
+            className="flex h-40 w-40 items-center justify-center rounded-lg px-5 py-3"
+          >
+            <Image src={item.icon} alt={`item-${index}`} className="w-full h-full object-contain" />
+          </div>
+        ))}
+      </motion.div>
     </div>
   );
 };
