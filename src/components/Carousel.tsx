@@ -12,26 +12,31 @@ interface CarouselProps {
 }
 
 const Carousel = ({ data }: CarouselProps) => {
-  const scrollingItems = [...data, ...data]; // duplicate for infinite scroll
+  const scrollingItems = [...data, ...data];
 
   return (
-    <div className="relative mt-24 h-96 w-full overflow-hidden md:my-10">
+    <div className="relative mt-24 h-40 w-full overflow-hidden md:my-10">
       <motion.div
-        className="flex gap-8 items-center"
+        className="flex gap-6 items-center w-max"
         initial={{ x: 0 }}
         animate={{ x: "-50%" }}
         transition={{
           repeat: Infinity,
           ease: [0, 0, 1, 1],
-          duration: 20, // adjust for speed
+          duration: 20, 
         }}
+        style={{ willChange: "transform" }}
       >
         {scrollingItems.map((item, index) => (
           <div
             key={index}
-            className="flex h-40 w-40 items-center justify-center rounded-lg px-5 py-3"
+            className="inline-flex flex-shrink-0 w-40 h-40 items-center justify-center rounded-lg px-5 py-3"
           >
-            <Image src={item.icon} alt={`item-${index}`} className="w-full h-full object-contain" />
+            <Image
+              src={item.icon}
+              alt={`item-${index}`}
+              className="object-contain max-w-full max-h-full"
+            />
           </div>
         ))}
       </motion.div>
