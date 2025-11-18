@@ -10,6 +10,7 @@ import ssright from "@/public/events/speaker-series/ss-right.webp";
 import gwleft from "@/public/events/growth-week/gw-left.webp";
 import gwmiddle from "@/public/events/growth-week/gw-middle.webp";
 import gwright from "@/public/events/growth-week/gw-right.webp";
+import Heading from "../Heading";
 
 const PastEvents = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -47,117 +48,120 @@ const PastEvents = () => {
   ];
 
   return (
-    <div className="outline-ascend-light-orange h-full w-full p-16">
-      <div className="flex">
-        {tabs.map(({ id, title }) => (
-          <button
-            key={id}
-            className={`font-playfair flex-1 rounded-t-4xl p-8 text-4xl font-bold ${
-              activeTab === id
-                ? "bg-ascend-light-orange"
-                : "text-ascend-red-orange bg-gray-300"
-            }`}
-            onClick={() => setActiveTab(id)}
-          >
-            {title}
-          </button>
-        ))}
-      </div>
-      <div className="font-nunito border-ascend-light-orange border-2 p-10 text-center text-2xl">
-        {tabs.map(
-          ({ id, content }) =>
-            activeTab === id && (
-              <div key={id} className="space-y-8">
-                {content.split("\n").map((paragraph, idx) => (
-                  <p key={idx}>{paragraph.trim()}</p>
-                ))}
-                {activeTab === 1 && (
-                  <div className="grid grid-cols-3 gap-4">
-                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
-                      <Image
-                        src={ocleft}
-                        alt="ocleft"
-                        fill
-                        className="object-cover"
-                      />
+    <div className="py-20">
+      <Heading title="Past Events" />
+      <div className="outline-ascend-light-orange h-full w-full p-16">
+        <div className="flex">
+          {tabs.map(({ id, title }) => (
+            <button
+              key={id}
+              className={`font-playfair flex-1 rounded-t-4xl p-8 text-4xl font-bold ${
+                activeTab === id
+                  ? "bg-ascend-light-orange"
+                  : "text-ascend-red-orange bg-gray-300"
+              }`}
+              onClick={() => setActiveTab(id)}
+            >
+              {title}
+            </button>
+          ))}
+        </div>
+        <div className="font-nunito border-ascend-light-orange border-2 p-10 text-center text-2xl">
+          {tabs.map(
+            ({ id, content }) =>
+              activeTab === id && (
+                <div key={id} className="space-y-8">
+                  {content.split("\n").map((paragraph, idx) => (
+                    <p key={idx}>{paragraph.trim()}</p>
+                  ))}
+                  {activeTab === 1 && (
+                    <div className="grid grid-cols-3 gap-4">
+                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                        <Image
+                          src={ocleft}
+                          alt="ocleft"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                        <Image
+                          src={ocmiddle}
+                          alt="ocmiddle"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                        <Image
+                          src={ocright}
+                          alt="ocright"
+                          fill
+                          className="object-cover [object-position:center_20%]"
+                        />
+                      </div>
                     </div>
-                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
-                      <Image
-                        src={ocmiddle}
-                        alt="ocmiddle"
-                        fill
-                        className="object-cover"
-                      />
+                  )}
+                  {activeTab === 2 && (
+                    <div className="grid grid-cols-3 gap-4">
+                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                        <Image
+                          src={ssleft}
+                          alt="ssleft"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                        <Image
+                          src={ssmiddle}
+                          alt="ssmiddle"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                        <Image
+                          src={ssright}
+                          alt="ssright"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
-                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
-                      <Image
-                        src={ocright}
-                        alt="ocright"
-                        fill
-                        className="object-cover [object-position:center_20%]"
-                      />
+                  )}
+                  {activeTab === 3 && (
+                    <div className="grid grid-cols-3 gap-4">
+                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                        <Image
+                          src={gwleft}
+                          alt="gwleft"
+                          fill
+                          className="object-cover [object-position:center_40%]"
+                        />
+                      </div>
+                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                        <Image
+                          src={gwmiddle}
+                          alt="gwmiddle"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                        <Image
+                          src={gwright}
+                          alt="gwright"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
-                  </div>
-                )}
-                {activeTab === 2 && (
-                  <div className="grid grid-cols-3 gap-4">
-                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
-                      <Image
-                        src={ssleft}
-                        alt="ssleft"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
-                      <Image
-                        src={ssmiddle}
-                        alt="ssmiddle"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
-                      <Image
-                        src={ssright}
-                        alt="ssright"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-                )}
-                {activeTab === 3 && (
-                  <div className="grid grid-cols-3 gap-4">
-                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
-                      <Image
-                        src={gwleft}
-                        alt="gwleft"
-                        fill
-                        className="object-cover [object-position:center_40%]"
-                      />
-                    </div>
-                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
-                      <Image
-                        src={gwmiddle}
-                        alt="gwmiddle"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="relative h-64 w-full overflow-hidden rounded-lg">
-                      <Image
-                        src={gwright}
-                        alt="gwright"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-                )}
-              </div>
-            ),
-        )}
+                  )}
+                </div>
+              ),
+          )}
+        </div>
       </div>
     </div>
   );
