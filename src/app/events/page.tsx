@@ -1,5 +1,11 @@
+import PastEvents from "@/components/events/PastEvents";
+
 const Events = () => {
-  return <p>past events</p>;
+  return (
+    <>
+      <PastEvents />
+    </>
+  );
 };
 
 export default Events;
