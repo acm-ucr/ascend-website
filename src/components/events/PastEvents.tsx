@@ -55,7 +55,7 @@ const PastEvents = () => {
           {tabs.map(({ id, title }) => (
             <button
               key={id}
-              className={`font-playfair flex-1 rounded-t-4xl p-8 text-4xl font-bold ${
+              className={`font-playfair flex-1 rounded-t-4xl p-8 text-3xl font-bold ${
                 activeTab === id
                   ? "bg-ascend-light-orange"
                   : "text-ascend-red-orange bg-gray-300"
@@ -66,7 +66,7 @@ const PastEvents = () => {
             </button>
           ))}
         </div>
-        <div className="font-nunito border-ascend-light-orange border-2 p-10 text-center text-2xl">
+        <div className="font-nunito border-ascend-light-orange border-2 p-10 text-center text-xl">
           {tabs.map(
             ({ id, content }) =>
               activeTab === id && (
