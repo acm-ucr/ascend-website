@@ -3,13 +3,13 @@ import Link from "next/link";
 
 const Join = () => {
   return (
-    <div className="flex flex-col items-center mb-20 text-center">
+    <div className="mb-20 flex flex-col items-center text-center">
       <SubHeading title="How to Join" />
       <div className="w-1/2">
         <p>
-        Click below to join Ascend and take the first step toward new
-        opportunities, meaningful connections, and becoming part of
-        an inspiring community today!
+          Click below to join Ascend and take the first step toward new
+          opportunities, meaningful connections, and becoming part of an
+          inspiring community today!
         </p>
       </div>
       <Link
