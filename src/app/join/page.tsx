@@ -1,14 +1,16 @@
-import SubHeading from "@/components/join/SubHeading";
+import SubHeading from "@/components/SubHeading";
 import Link from "next/link";
 
 const Join = () => {
   return (
-    <div className="mb-20 text-center">
+    <div className="flex flex-col items-center mb-20 text-center">
       <SubHeading title="How to Join" />
-      <div className="my-10 text-center">
-        <p>Click below to join Ascend and take the first step toward new</p>
-        <p>opportunities, meaningful connections, and becoming part of</p>
-        <p>an inspiring community today!</p>
+      <div className="w-1/2">
+        <p>
+        Click below to join Ascend and take the first step toward new
+        opportunities, meaningful connections, and becoming part of
+        an inspiring community today!
+        </p>
       </div>
       <Link
         href="./page.tsx"
