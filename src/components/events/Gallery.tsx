@@ -1,21 +1,19 @@
 import Image from "next/image";
-
-const placeholderImage = "/events/gallery-1.webp";
+import photos from "@/data/photos";
 
 const Gallery = () => {
   return (
-    <div className="grid grid-cols-3 gap-4 p-4 md:p-8">
-      {Array.from({ length: 12 }).map((_, index) => (
+    <div className="lg::p-30 grid grid-cols-3 gap-6 p-10 sm:p-15 md:p-25">
+      {photos.map((photo, index) => (
         <div
           key={index}
           className="relative aspect-[4/3] w-full overflow-hidden"
         >
           <Image
-            src={placeholderImage}
-            alt={`Placeholder image ${index + 1}`}
+            src={photo.image}
+            alt={photo.alt}
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover transition-transform duration-300 hover:scale-105"
+            className="object-cover transition-transform hover:scale-105"
           />
         </div>
       ))}

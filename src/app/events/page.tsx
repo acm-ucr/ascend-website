@@ -1,5 +1,7 @@
+import Gallery from "@/components/events/Gallery";
+
 const Events = () => {
-  return <p>past events</p>;
+  return <Gallery />;
 };
 
 export default Events;
