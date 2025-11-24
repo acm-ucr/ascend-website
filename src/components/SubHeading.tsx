@@ -4,10 +4,10 @@ interface SubHeadingProps {
 
 const SubHeading = ({ title }: SubHeadingProps) => {
   return (
-    <div className="my-9 w-1/2 text-center">
+    <div className="my-9 w-3/4 text-center">
       <div className="border-t border-black" />
       <div className="my-8">
-        <p className="text-ascend-red-orange font-playfair text-3xl font-bold">
+        <p className="text-ascend-red-orange font-playfair text-3xl font-bold md:text-4xl">
           {title}
         </p>
       </div>
