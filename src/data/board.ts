@@ -28,8 +28,6 @@ import codyNyguen from "@/public/board/cody-nyguen.webp";
 import isabellaWu from "@/public/board/isabella-wu.webp";
 import davidHuang from "@/public/board/david-huang.webp";
 
-
-
 // Presidents
 
 export const presidents: BoardMember[] = [
@@ -48,7 +46,6 @@ export const presidents: BoardMember[] = [
     linkedin: "https://www.linkedin.com/in/andrew-martinez-1358bb2a2/",
   },
 ];
-
 
 // Events Committee
 
@@ -89,7 +86,6 @@ export const eventsCommittee: BoardMember[] = [
     linkedin: "https://www.linkedin.com/in/jamie-kwong-re/",
   },
 ];
-
 
 // Membership Committee
 
