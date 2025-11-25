@@ -1,7 +1,6 @@
-const dot =
-  "w-3 h-3 md:w-5 md:h-5 lg:w-7 lg:h-7 xl:w-9 xl:h-9 bg-ascend-light-orange rounded-full";
+const dot = "w-3 h-3 md:w-5 md:h-5 bg-ascend-light-orange rounded-full";
 
-const gap = "gap-2 md:gap-4 lg:gap-6 xl:gap-8";
+const gap = "gap-2 md:gap-4";
 
 interface HeadingProps {
   title: string;
@@ -24,7 +23,7 @@ const Heading = ({ title }: HeadingProps) => {
         </div>
       </div>
 
-      <h2 className="font-playfair text-ascend-dark-blue mx-10 text-3xl font-bold text-nowrap md:mx-20 md:text-5xl lg:mx-30 lg:text-7xl xl:mx-40 xl:text-9xl">
+      <h2 className="font-playfair text-ascend-dark-blue mx-10 text-3xl font-bold text-nowrap md:text-5xl lg:text-6xl">
         {title}
       </h2>
 
