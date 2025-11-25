@@ -1,11 +1,7 @@
-import PastEvents from "@/components/events/PastEvents";
+import Gallery from "@/components/events/Gallery";
 
 const Events = () => {
-  return (
-    <>
-      <PastEvents />
-    </>
-  );
+  return <Gallery />;
 };
 
 export default Events;
