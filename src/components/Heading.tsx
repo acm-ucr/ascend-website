@@ -9,34 +9,24 @@ interface HeadingProps {
 const Heading = ({ title }: HeadingProps) => {
   return (
     <div className="flex items-center justify-center">
-      <div className={`mb-4 flex flex-col md:mb-8 lg:mb-12 xl:mb-16 ${gap}`}>
-        <div className={`flex ${gap}`}>
+      <div className="mb-4 flex flex-col gap-2 md:mb-8 md:gap-4 lg:mb-12 xl:mb-16">
+        <div className="flex gap-2 md:gap-4">
           <span className={dot} />
           <span className={dot} />
           <span className={dot} />
         </div>
-        <div className={`flex ${gap}`}>
-          <span className={dot} />
-        </div>
-        <div className={`flex ${gap}`}>
-          <span className={dot} />
-        </div>
+        <span className={dot} />
+        <span className={dot} />
       </div>
 
-      <h2 className="font-playfair text-ascend-dark-blue mx-10 text-3xl font-bold text-nowrap md:text-5xl lg:text-6xl">
+      <p className="font-playfair text-ascend-dark-blue mx-10 text-3xl font-bold text-nowrap md:text-5xl lg:text-6xl">
         {title}
-      </h2>
+      </p>
 
-      <div
-        className={`mt-4 flex flex-col items-end md:mt-8 lg:mt-12 xl:mt-16 ${gap}`}
-      >
-        <div className={`flex ${gap}`}>
-          <span className={dot} />
-        </div>
-        <div className={`flex ${gap}`}>
-          <span className={dot} />
-        </div>
-        <div className={`flex ${gap}`}>
+      <div className="mt-4 flex flex-col items-end gap-2 md:mt-8 md:gap-4 lg:mt-12 xl:mt-16">
+        <span className={dot} />
+        <span className={dot} />
+        <div className="flex gap-2 md:gap-4">
           <span className={dot} />
           <span className={dot} />
           <span className={dot} />
