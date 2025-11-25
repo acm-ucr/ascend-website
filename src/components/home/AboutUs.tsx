@@ -6,8 +6,7 @@ import Heading from "../Heading";
 
 const AboutUs = () => {
   return (
-    <div className="font-nunito mx-auto flex w-4/5 flex-col gap-8 p-20 text-2xl/11
-    max-lg:w-full max-lg:p-16 max-lg:text-xl/8">
+    <div className="font-nunito mx-auto flex w-4/5 flex-col gap-8 p-20 text-2xl/11 max-lg:w-full max-lg:p-16 max-lg:text-xl/8">
       <Heading title="About Us" />
 
       <p className="mt-10">
@@ -24,8 +23,7 @@ const AboutUs = () => {
         friendships.
       </p>
 
-      <div className="col-span-3 flex flex-row justify-between text-4xl
-      max-lg:flex-col max-lg:items-center max-lg:gap-6 max-lg:text-2xl">
+      <div className="col-span-3 flex flex-row justify-between text-4xl max-lg:flex-col max-lg:items-center max-lg:gap-6 max-lg:text-2xl">
         <div className="flex flex-col items-center gap-4">
           <Image
             src={connect}
