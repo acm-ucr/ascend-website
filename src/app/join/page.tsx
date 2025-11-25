@@ -1,5 +1,7 @@
+import How from "@/components/join/how";
+
 const Join = () => {
-  return <p>Join Us</p>;
+  return <How />;
 };
 
 export default Join;
