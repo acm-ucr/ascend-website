@@ -1,7 +1,5 @@
 const dot = "w-3 h-3 md:w-5 md:h-5 bg-ascend-light-orange rounded-full";
 
-const gap = "gap-2 md:gap-4";
-
 interface HeadingProps {
   title: string;
 }
