@@ -1,5 +1,3 @@
-import type { StaticImageData } from "next/image";
-
 // Image Imports
 // Presidents
 import allenLien from "@/public/board/allen-lien.webp";
