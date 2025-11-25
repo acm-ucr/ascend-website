@@ -1,10 +1,8 @@
-import JoinUs from "@/components/join/JoinUs";
+
+import How from "@/components/join/how";
+
 const Join = () => {
-  return (
-    <div className="flex min-h-screen w-full flex-col items-center">
-      <JoinUs />
-    </div>
-  );
+  return <How />;
 };
 
 export default Join;

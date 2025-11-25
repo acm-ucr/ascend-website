@@ -1,9 +1,13 @@
-import PastEvents from "@/components/events/PastEvents";
+import Gallery from "@/components/events/Gallery";
+import SubHeading from "@/components/SubHeading";
+import Heading from "@/components/Heading";
 
 const Events = () => {
   return (
     <>
-      <PastEvents />
+      <Heading title="Past Events" />
+      <SubHeading title="Gallery" />
+      <Gallery />
     </>
   );
 };
