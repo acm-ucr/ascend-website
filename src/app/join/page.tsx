@@ -1,4 +1,3 @@
-
 import How from "@/components/join/how";
 
 const Join = () => {
