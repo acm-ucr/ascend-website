@@ -11,13 +11,13 @@ const [activeTab,  setActiveTab] = useState("Consulting");
 
     return (
         <div>
-            <div>Meet Our Mentors</div>
-            <div className="flex">
+            <div className="flex justify-center">Meet Our Mentors</div>
+            <div className="flex ">
             {["Consulting", "Finance", "Accounting", "Tech"].map((tab) => (
                 <button 
                     onClick = {() => setActiveTab(tab)}
                      className={`
-              px-8 py-3 rounded-t-xl text-lg font-semibold
+              w-1/4 flex justify-center px-12 py-3 rounded-t-xl text-lg font-semibold
               transition
               ${
                 activeTab === tab
@@ -29,7 +29,9 @@ const [activeTab,  setActiveTab] = useState("Consulting");
             ))
             }
             </div>
-            <MentorGrid data={activeTab} />
+            <div className="border border-orange-300 p-8">
+        <MentorGrid data={activeTab} />
+      </div>
         </div>
     )
 };
