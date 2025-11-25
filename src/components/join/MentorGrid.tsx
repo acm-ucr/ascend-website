@@ -1,6 +1,11 @@
 import Image from "next/image";
 
-type Mentor = { name: string; major: string; linkedin?: string; image?: string };
+type Mentor = {
+  name: string;
+  major: string;
+  linkedin?: string;
+  image?: string;
+};
 
 const MentorGrid = ({ data }: { data: Mentor[] }) => {
   const selected = data || [];
@@ -18,7 +23,7 @@ const MentorGrid = ({ data }: { data: Mentor[] }) => {
               className="rounded-xl object-cover"
             />
           ) : (
-            <div className="w-48 h-48 bg-gray-400 rounded-xl" />
+            <div className="h-48 w-48 rounded-xl bg-gray-400" />
           )}
 
           <p className="text-sm text-gray-600">{mentor.major}</p>
@@ -28,12 +33,15 @@ const MentorGrid = ({ data }: { data: Mentor[] }) => {
               href={mentor.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#0b143c] text-white px-6 py-1 rounded-full underline"
+              className="rounded-full bg-[#0b143c] px-6 py-1 text-white underline"
             >
               Linkedin
             </a>
           ) : (
-            <button className="bg-gray-300 text-gray-700 px-6 py-1 rounded-full" disabled>
+            <button
+              className="rounded-full bg-gray-300 px-6 py-1 text-gray-700"
+              disabled
+            >
               Linkedin
             </button>
           )}
