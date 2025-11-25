@@ -27,7 +27,7 @@ const MentorGrid = ({data}) => {
   const selected = mentors[data];
 
     return (
-    <div className="grid grid-cols-3 gap-12">
+    <div className="grid grid-cols-3 gap-10">
       {selected.map((mentor, idx) => (
         <div key={idx} className="flex flex-col items-center gap-3">
           <div className="w-48 h-48 bg-gray-400 rounded-xl"></div>
