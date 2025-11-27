@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { motion } from "motion/react";
 import Image from "next/image";
 import ocleft from "@/public/events/oc/oc-left.webp";
 import ocmiddle from "@/public/events/oc/oc-middle.webp";
@@ -43,19 +44,19 @@ const PastEvents = () => {
       content: `At Ascend UCR, we believe starting your professional journey shouldn't be overwhelming — that's why we created Growth Week. Instead of spreading workshops across the year like most organizations, we condences everything you need to kickstart you career into one action-packed week.
         
          During Week 2 of both Fall and Winter quarters, we host three back-to-back events focused on helping you get ready: from prefecting you resume before you hit "submit," to mastering networking strategies that build real relationships, to sharpening your interview skills.
-         Growth Week is all about giving you the tools, confidence, and momentum to grow into the professional and leader you aspire to be. It's designed to eliminate the barriars to getting started — inspiring you to take action now and make your futer happen.`,
+         Growth Week is all about giving you the tools, confidence, and momentum to grow into the professional and leader you aspire to be. It's designed to eliminate the barriars to getting started — inspiring you to take action now and make your future happen.`,
     },
   ];
 
   return (
     <div className="py-20">
       <Heading title="Past Events" />
-      <div className="outline-ascend-light-orange h-full w-full p-16">
+      <div className="outline-ascend-light-orange h-full w-full p-8 md:p-16">
         <div className="flex">
           {tabs.map(({ id, title }) => (
             <button
               key={id}
-              className={`font-playfair flex-1 rounded-t-4xl p-8 text-4xl font-bold ${
+              className={`font-playfair flex-1 rounded-t-2xl p-2 font-bold md:rounded-t-4xl md:p-8 md:text-3xl ${
                 activeTab === id
                   ? "bg-ascend-light-orange"
                   : "text-ascend-red-orange bg-gray-300"
@@ -66,7 +67,7 @@ const PastEvents = () => {
             </button>
           ))}
         </div>
-        <div className="font-nunito border-ascend-light-orange border-2 p-10 text-center text-2xl">
+        <div className="font-nunito border-ascend-light-orange border-2 p-6 text-center md:p-10 md:text-xl">
           {tabs.map(
             ({ id, content }) =>
               activeTab === id && (
@@ -75,87 +76,132 @@ const PastEvents = () => {
                     <p key={idx}>{paragraph.trim()}</p>
                   ))}
                   {activeTab === 1 && (
-                    <div className="grid grid-cols-3 gap-4">
-                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1.2 }}
+                        className="relative hidden h-64 w-full overflow-hidden rounded-lg md:block"
+                      >
                         <Image
                           src={ocleft}
                           alt="ocleft"
                           fill
                           className="object-cover"
                         />
-                      </div>
-                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1.2, delay: 0.4 }}
+                        className="relative hidden h-64 w-full overflow-hidden rounded-lg md:block"
+                      >
                         <Image
                           src={ocmiddle}
                           alt="ocmiddle"
                           fill
                           className="object-cover"
                         />
-                      </div>
-                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1.2, delay: 0.8 }}
+                        className="relative h-64 w-full overflow-hidden rounded-lg"
+                      >
                         <Image
                           src={ocright}
                           alt="ocright"
                           fill
                           className="object-cover [object-position:center_20%]"
                         />
-                      </div>
+                      </motion.div>
                     </div>
                   )}
                   {activeTab === 2 && (
-                    <div className="grid grid-cols-3 gap-4">
-                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1.2 }}
+                        className="relative h-64 w-full overflow-hidden rounded-lg"
+                      >
                         <Image
                           src={ssleft}
                           alt="ssleft"
                           fill
                           className="object-cover"
                         />
-                      </div>
-                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1.2, delay: 0.4 }}
+                        className="relative hidden h-64 w-full overflow-hidden rounded-lg md:block"
+                      >
                         <Image
                           src={ssmiddle}
                           alt="ssmiddle"
                           fill
                           className="object-cover"
                         />
-                      </div>
-                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1.2, delay: 0.8 }}
+                        className="relative hidden h-64 w-full overflow-hidden rounded-lg md:block"
+                      >
                         <Image
                           src={ssright}
                           alt="ssright"
                           fill
                           className="object-cover"
                         />
-                      </div>
+                      </motion.div>
                     </div>
                   )}
                   {activeTab === 3 && (
-                    <div className="grid grid-cols-3 gap-4">
-                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1.2 }}
+                        className="relative h-64 w-full overflow-hidden rounded-lg"
+                      >
                         <Image
                           src={gwleft}
                           alt="gwleft"
                           fill
                           className="object-cover [object-position:center_40%]"
                         />
-                      </div>
-                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1.2, delay: 0.4 }}
+                        className="relative hidden h-64 w-full overflow-hidden rounded-lg md:block"
+                      >
                         <Image
                           src={gwmiddle}
                           alt="gwmiddle"
                           fill
                           className="object-cover"
                         />
-                      </div>
-                      <div className="relative h-64 w-full overflow-hidden rounded-lg">
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1.2, delay: 0.8 }}
+                        className="relative hidden h-64 w-full overflow-hidden rounded-lg md:block"
+                      >
                         <Image
                           src={gwright}
                           alt="gwright"
                           fill
                           className="object-cover"
                         />
-                      </div>
+                      </motion.div>
                     </div>
                   )}
                 </div>
