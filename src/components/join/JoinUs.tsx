@@ -4,7 +4,7 @@ import Image from "next/image";
 const JoinUs = () => {
   return (
     <div className="min-h-screen">
-      <div className="flex flex-col items-center justify-center pt-20">
+      <div className="flex flex-col items-center justify-center pt-20 not-visited:flex-col md:flex">
         <Heading title="Join Us" />
         <p className="text-ascend-dark-blue mt-15 w-2/3 text-center text-2xl">
           Ascend is a national non-profit organization that is advancing
@@ -18,7 +18,7 @@ const JoinUs = () => {
             src="/home/ascend.webp"
             alt="Logo"
             fill
-            className="object-cover"
+            className="w-full object-cover md:h-full"
             priority
           />
         </div>
