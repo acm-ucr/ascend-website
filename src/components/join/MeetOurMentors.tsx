@@ -8,7 +8,7 @@ const MeetOurMentors = () => {
   const [activeTab, setActiveTab] = useState("Consulting");
 
   return (
-    <div>
+    <>
       <div className="font-playfair mb-12 flex justify-center text-3xl font-bold">
         Meet Our Mentors
       </div>
@@ -38,7 +38,7 @@ const MeetOurMentors = () => {
       <div className="border-2 border-orange-300 px-14 py-12">
         <MentorGrid data={mentors[activeTab as keyof typeof mentors]} />
       </div>
-    </div>
+    </>
   );
 };
 
