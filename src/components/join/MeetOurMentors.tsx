@@ -8,7 +8,7 @@ const MeetOurMentors = () => {
   const [activeTab, setActiveTab] = useState("Consulting");
 
   return (
-    <div className="w-76/100 m-auto">
+    <div className="m-auto w-76/100">
       <div className="font-playfair mb-12 flex justify-center text-3xl font-bold">
         Meet Our Mentors
       </div>
