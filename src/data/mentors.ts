@@ -16,7 +16,7 @@ const mentors = {
       name: "Mentor 3",
       major: "Marketing",
       linkedin: "https://linkedin.com/in/mentor3",
-      image: "/mentors/mentor3.jpg",
+      image: "/mentors/mentor2.jpg",
     },
     {
       name: "Mentor 4",
@@ -34,7 +34,7 @@ const mentors = {
       name: "Mentor 6",
       major: "Math",
       linkedin: "https://linkedin.com/in/mentor6",
-      image: "/mentors/mentor3.jpg",
+      image: "/mentors/mentor1.jpg",
     },
   ],
   Finance: [
@@ -42,13 +42,13 @@ const mentors = {
       name: "Mentor A",
       major: "Finance",
       linkedin: "https://linkedin.com/in/mentorA",
-      image: "/mentors/mentorA.jpg",
+      image: "/mentors/mentor2.jpg",
     },
     {
       name: "Mentor B",
       major: "Accounting",
       linkedin: "https://linkedin.com/in/mentorB",
-      image: "/mentors/mentorB.jpg",
+      image: "/mentors/mentor1.jpg",
     },
   ],
   Accounting: [
@@ -56,7 +56,7 @@ const mentors = {
       name: "Mentor C",
       major: "Accounting",
       linkedin: "https://linkedin.com/in/mentorC",
-      image: "/mentors/mentorC.jpg",
+      image: "/mentors/mentor2.jpg",
     },
   ],
   Tech: [
@@ -64,7 +64,7 @@ const mentors = {
       name: "Mentor Z",
       major: "Computer Science",
       linkedin: "https://linkedin.com/in/mentorZ",
-      image: "/mentors/mentorZ.jpg",
+      image: "/mentors/mentor1.jpg",
     },
   ],
 };
