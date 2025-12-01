@@ -24,7 +24,7 @@ const MeetOurMentors = () => {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`font-playfair flex w-1/4 min-w-0 justify-center truncate rounded-t-3xl px-2 py-2 text-[11px] font-bold sm:px-6 sm:py-3 sm:text-base md:text-2xl ${
+              className={`font-playfair flex w-1/4 min-w-0 justify-center truncate rounded-t-3xl px-2 py-2 text-[15px] font-bold sm:px-6 sm:py-3 sm:text-xl md:text-2xl ${
                 activeTab === tab
                   ? "bg-ascend-light-orange text-black"
                   : "text-ascend-red-orange bg-gray-200"
