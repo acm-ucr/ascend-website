@@ -8,25 +8,21 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white py-10 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] 
-                      flex flex-col md:flex-row items-center md:items-start 
-                      justify-center md:justify-between px-6 md:px-32 gap-10 md:gap-0">
-
-      <div className="flex justify-center md:justify-start w-full md:w-auto order-2 md:order-none">
-        <Image 
+    <footer className="flex w-full flex-col items-center justify-center gap-10 bg-white px-6 py-10 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] md:flex-row md:items-start md:justify-between md:gap-0 md:px-32">
+      <div className="order-2 flex w-full justify-center md:order-none md:w-auto md:justify-start">
+        <Image
           src={ascendLogo}
           alt="Ascend Logo"
-          className="w-24 sm:w-42 md:w-60" 
+          className="w-24 sm:w-42 md:w-60"
         />
       </div>
 
-      <div className ="flex flex-col items-center md:items-start text-center md:text-left order-1 md:order-none">
-
+      <div className="order-1 flex flex-col items-center text-center md:order-none md:items-start md:text-left">
         <div className="font-playfair text-3xl font-bold">Contact Us</div>
 
-         <a
+        <a
           href="mailto:ascenducr@gmail.com"
-          className="hidden md:block mt-1 underline decoration-1"
+          className="mt-1 hidden underline decoration-1 md:block"
         >
           ascenducr@gmail.com
         </a>
@@ -36,7 +32,7 @@ const Footer = () => {
             href="https://linktr.ee/AscendUCR"
             target="_blank"
             rel="noopener noreferrer"
-            className = "hover:opacity-70 transition" //ADDED HOVER 
+            className="transition hover:opacity-70" //ADDED HOVER
           >
             <SiLinktree size={35} />
           </Link>
@@ -45,7 +41,7 @@ const Footer = () => {
             href="https://www.linkedin.com/company/ascenducr-25"
             target="_blank"
             rel="noopener noreferrer"
-            className = "hover:opacity-70 transition"//ADDED HOVER 
+            className="transition hover:opacity-70" //ADDED HOVER
           >
             <FiLinkedin size={40} />
           </Link>
@@ -54,16 +50,16 @@ const Footer = () => {
             href="https://www.instagram.com/ascend_ucr/"
             target="_blank"
             rel="noopener noreferrer"
-            className = "hover:opacity-70 transition" //ADDED HOVER 
+            className="transition hover:opacity-70" //ADDED HOVER
           >
             <FaInstagram size={40} />
           </Link>
 
           <a
-            href = "mailto:ascenducr@gmail.com"
-            className = "block md:hidden hover:opacity-70 transition"
+            href="mailto:ascenducr@gmail.com"
+            className="block transition hover:opacity-70 md:hidden"
           >
-            <FiMail size={40}/>
+            <FiMail size={40} />
           </a>
         </div>
       </div>
