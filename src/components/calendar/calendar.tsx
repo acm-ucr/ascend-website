@@ -67,20 +67,21 @@ function Calendar({
         classNames={{
           months: "",
           month: "",
-          caption: "",
+          month_caption: "",
           caption_label: "",
           nav: "space-x-8",
           button: "",
           button_previous: "hidden",
           button_next: "hidden",
-          table: "space-y-1",
-          head_row:
-            "border border-ascend-red-orange mt-[2vw] w-full rounded-t-xl text-center grid grid-cols-7",
-          head_cell:
-            "text-ascend-red-orange border border-ascend-red-orange text-md md:text-3xl py-1 md:py-2",
-          row: "grid grid-cols-7 w-full",
-          cell: "border border-ascend-red-orange p-0 bg-white h-[15vh] md:h-[20vh]",
-          day: "",
+          month_grid: "w-full space-y-1",
+          weekdays:
+            "grid grid-cols-7 bg-ascend-red-orange mt-[2vw] w-full text-center items-center justify-center h-[3vh] md:h-[5vh]",
+          weekday:
+            "text-white font-playfair text-sm sm:text-lg md:text-2xl ",
+          week: "grid grid-cols-7",
+          day:
+            "h-[15vh] border border-ascend-red-orange bg-white md:text-3xl py-1 md:py-2",
+          day_button: "w-full h-full",
           range_end: "",
           selected: "",
           outside: "",

@@ -73,9 +73,9 @@ const CalendarDay = ({ date, events }: DayProps) => {
 
   return (
     <td
-      className={`flex h-full w-full flex-col gap-y-[0.5vw] ${isToday ? "bg-ascend-peach opacity-50" : ""} ${isPastDay ? "text-gray-500" : ""}`}
+      className={`flex aspect-square h-full w-full flex-col border border-ascend-peach/50 text-black ${isToday ? "bg-ascend-peach/40" : ""} ${isPastDay ? "bg-gray-400/30 text-gray-500" : ""}`}
     >
-      <p className="mt-1 mr-1 flex justify-end text-sm font-bold text-black md:mt-2 md:ml-2 md:text-3xl">
+      <p className="mt-1 mr-1 flex justify-end text-xs font-bold md:mt-2 md:ml-2 sm:text-sm md:text-xl lg:text-2xl">
         {date.getDate()}
       </p>
 

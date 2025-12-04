@@ -21,13 +21,13 @@ interface CalendarEventPopoverProps {
 }
 
 const dayClasses: Record<number, string> = {
-  0: "bg-winc-red-400 text-white",
-  1: "bg-winc-yellow-200 text-winc-blue-500",
-  2: "bg-winc-orange-100 text-white",
-  3: "bg-winc-yellow-200 text-winc-blue-500",
-  4: "bg-winc-orange-100 text-white",
-  5: "bg-winc-yellow-200 text-winc-blue-500",
-  6: "bg-winc-red-400 text-white",
+  0: "bg-ascend-light-orange text-ascend-dark-blue",
+  1: "bg-ascend-red-orange text-white",
+  2: "bg-ascend-light-orange text-ascend-dark-blue",
+  3: "bg-ascend-red-orange text-white",
+  4: "bg-ascend-light-orange text-ascend-dark-blue",
+  5: "bg-ascend-red-orange text-white",
+  6: "bg-ascend-light-orange text-ascend-dark-blue",
 };
 
 const CalendarEventPopover = ({
@@ -94,7 +94,7 @@ const CalendarEventPopover = ({
           {title}
         </span>
       </DialogTrigger>
-      <DialogOverlay className="bg-gray-400/60">
+      <DialogOverlay className="bg-gray-400">
         <DialogContent className="bg- text-ascend-dark-blue z-50 border-2 border-black p-0 shadow-md">
           <DialogTitle>
             <div className="flex items-center justify-between px-4 pt-2 text-xl font-semibold">
